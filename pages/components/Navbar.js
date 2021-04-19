@@ -1,15 +1,17 @@
+import Link from 'next/link';
+
 const Navbar = () => {
     return (
         <nav>
             <div>
             <h1>Recipe Reunion</h1>
             </div>
-            <a> Home</a>
-            <a> My Story</a>
-            <a> My Recipes</a>
-            <a> My Cookbooks</a>
-            <a> Find People</a>
-            <a> Find Foods!</a>
+            <Link href="/"><a> Home</a></Link>
+            <Link href="/about"><a> My Story</a></Link>
+            <Link href="/recipe_portal/recipe_cards"><a> My Recipes</a></Link>
+            <Link href="/recipe_portal"><a> My Cookbooks</a></Link>
+            <Link href="/recipe_portal"><a> Find People</a></Link>
+            <Link href="/recipe_portal"><a> Find Foods!</a></Link>
 
         </nav>
      );
