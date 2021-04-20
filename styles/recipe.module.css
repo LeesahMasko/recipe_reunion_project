@@ -1,0 +1,7 @@
+.recipe_card {
+  box-shadow: 0 4px 8px 0;
+  transition: 0.3s;
+  width: 500px;
+  margin: 20px;
+  padding: 10px;
+}
