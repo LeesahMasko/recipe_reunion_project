@@ -6,3 +6,11 @@
 // a place to show modifications you've made (versions) to recipes ("I didn't have any milk, I used half&half and it turned out awesome!")
 // a place where you can see what your friends have recently started, planning to start or reccomending
 // maybe tabs??
+
+//Ingredients (parsed) should look something like this:
+// "ingredientParsed": {
+//    "quantity": 2.5,
+//    "unit": "tablespoon",
+//    "product": "parsley",
+//    "preparationNotes": "finely chopped",
+// }
