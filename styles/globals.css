@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
 body {
   background: #f2f2f2;
   color: #333;
-  font-family: "Nunito";
+  font-family: "Lobster", cursive;
+  z-index: 1;
 }
 
 a {
@@ -11,7 +12,7 @@ a {
   text-decoration: none;
 }
 .content {
-  max-width: 960px;
+  max-width: 500px;
   margin: 0 auto;
 }
 
@@ -22,14 +23,17 @@ nav {
   justify-content: flex-end;
   align-items: flex-end;
   border-bottom: 1px solid #ddd;
+  z-index: 1;
 }
 
 nav a {
   margin-left: 12px;
+  z-index: 1;
 }
 
 nav .logo {
   margin-right: auto;
+  z-index: 1;
 }
 
 footer {
@@ -39,6 +43,7 @@ footer {
   margin-top: 60px;
   color: #777;
   border-top: 1px solid #eaeaea;
+  z-index: 1;
 }
 
 .not-found {

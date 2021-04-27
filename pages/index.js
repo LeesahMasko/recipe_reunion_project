@@ -3,21 +3,30 @@ import styles from '../styles/Home.module.css'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Home() {
   return (
-    <div>
+    <div className={styles.container}>
+      <Image
+      className={styles.landingImage}
+      src="/food.jpg"
+      alt="picture of food on gradient background"
+      layout="fill"
+      objectFit="cover"
+      objectPosition="center"
+      />
+
       <h1 className={styles.title}>Recipe Renuion</h1>
-      <p className={styles.text}>A place for all those memories that are connected to food!</p>
-      <p className={styles.text}>Share grandma's sugar cookie recipe with your cousins.</p>
-      <p className={styles.text}>Scan a copy of your mom's Minestrone Soup recipe card to save her handwritting and notes for your kids to have.</p>
-      <p className={styles.text}>Upload a video of yourself showing that tricky technique of how your aunt taught you to roll out pie crust.</p>
+      <p className={styles.landingText}>Where food, family, friends, and memories gather.</p>
+      <p className={styles.landingText}>Even when you are far apart.</p>
       <Link href='/about'>
         <a className={styles.btn}>Go to My Profile</a>
       </Link>
       <Link href='/about'>
         <a className={styles.btn}>Jump to my Recipe Book</a>
       </Link>
-    </div>
+      </div>
+
   )
 }

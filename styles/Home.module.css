@@ -2,6 +2,7 @@
   color: #333;
   padding-bottom: 20px;
   text-align: center;
+  z-index: 1;
 }
 
 .text {
@@ -13,8 +14,19 @@
   width: 150px;
   padding: 8px 0;
   margin: 20px auto;
-  background: #4979ff;
+  background: #2a9d8f;
   border-radius: 4px;
   color: white;
   text-align: center;
+  z-index: 1;
+}
+
+.landingImage {
+  height: 50px;
+  z-index: 0;
+}
+
+.landingText {
+  position: relative;
+  z-index: 1;
 }
