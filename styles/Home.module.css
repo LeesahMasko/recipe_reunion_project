@@ -22,11 +22,12 @@
 }
 
 .landingImage {
-  height: 50px;
+  height: 500px;
   z-index: 0;
 }
 
 .landingText {
+  color: #777;
   position: relative;
   z-index: 1;
 }
