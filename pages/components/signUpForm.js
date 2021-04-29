@@ -41,10 +41,10 @@ const PortfolioForm = ({onSubmit}) => {
           name="lastname"
           type="text"
           className="form-control"
-          id="company"/>
-          { errors.company &&
+          id="lastname"/>
+          { errors.lastname &&
             <Alert variant="danger">
-              { errors.company?.type === "required" && <p>Last name is required</p> }
+              { errors.lastname?.type === "required" && <p>Last name is required</p> }
               { errors.title?.type === "firstLetterUpper" && <p>First letter should be uppercased!</p> }
 
             </Alert>
@@ -54,30 +54,15 @@ const PortfolioForm = ({onSubmit}) => {
       <div className="form-group">
         <label htmlFor="city">Email Address</label>
         <input
-          ref={register({required: true, pattern: /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/})}
+          ref={register({required: true, pattern: {value: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/}})}
           name="emailaddress"
           type="text"
           className="form-control"
-          id="companyWebsite"/>
-          { errors.companyWebsite &&
+          id="emailaddress"/>
+          { errors.emailaddress &&
             <Alert variant="danger">
-              { errors.companyWebsite?.type === "required" && <p>Email is required</p> }
-              { errors.companyWebsite?.type === "pattern" && <p>Enter a valid email address</p> }
-            </Alert>
-          }
-      </div>
-
-      <div className="form-group">
-        <label htmlFor="street">Location</label>
-        <input
-          ref={register({required: true})}
-          name="location"
-          type="text"
-          className="form-control"
-          id="location"/>
-          { errors.location &&
-            <Alert variant="danger">
-              Some Error
+              { errors.emailaddress?.type === "required" && <p>Email is required</p> }
+              { errors.emailaddress?.type === "pattern" && <p>Please enter a valid email address</p> }
             </Alert>
           }
       </div>
@@ -85,7 +70,7 @@ const PortfolioForm = ({onSubmit}) => {
       <div className="form-group">
         <label htmlFor="description">Your cooking story! (optional)</label>
         <textarea
-          ref={register({required: true})}
+          ref={register({required: false})}
           name="description"
           rows="5"
           type="text"
